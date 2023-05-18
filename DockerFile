@@ -13,7 +13,7 @@ RUN apt-get update && \
 # && apt-get install -y software-properties-common gcc && \
 #     add-apt-repository -y ppa:deadsnakes/ppa
 
- RUN apt-get update && apt-get install -y python3-distutils python3-pip python3-apt git
+RUN apt-get update && apt-get install -y python3-distutils python3-pip python3-apt git
 
 # Install miniconda
 ENV CONDA_DIR /opt/conda
@@ -40,5 +40,5 @@ RUN pip3 install .
     
 COPY test.py .
 
-ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "vall"]
-CMD ["python", "-m", "vall_e.emb.g2p", "data/test"]
+# ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "vall"]
+# CMD ["python", "-m", "vall_e.emb.g2p", "data/test"]
