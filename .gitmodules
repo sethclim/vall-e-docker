@@ -1,0 +1,3 @@
+[submodule "vall-e"]
+	path = vall-e
+	url = https://github.com/enhuiz/vall-e
