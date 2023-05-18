@@ -22,6 +22,11 @@ docker build -t vall-e -f DockerFile .
 docker run --gpus all  vall-e "python" "-m" "vall_e.emb.g2p" "data/test"
 ```
 
+### Run and Mount Data Folder on Container for Training 
+```
+ docker run --gpus all --volume ${pwd}/data:/data  vall-e 
+```
+
 ### Test Torch GPU 
 ```
  docker run --gpus all  vall-e "python" "test.py"
@@ -29,4 +34,11 @@ docker run --gpus all  vall-e "python" "-m" "vall_e.emb.g2p" "data/test"
 or
 ```
  docker run --gpus all  vall-e nvidia-smi  
+```
+ 
+
+### NEW COMMAND
+In WSL Terminal in vale repo run   
+```
+docker run  --gpus all --volume $(pwd)/data:/code/data -it  vall-e
 ```
