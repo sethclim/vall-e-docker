@@ -1,6 +1,12 @@
 ## Overview
 Repo to build docker image to run Vall-e python.
 
+### How To Clone
+
+```
+git clone --recurse-submodules <address.git>
+```
+
 ### How To Build
 ```
 docker build -t vall-e -f DockerFile .
